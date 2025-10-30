@@ -6,15 +6,19 @@
   max-height: 90dvh;
   z-index: 11000;
   top: 50%;
-  left: 50%;
-  width: calc(100% - 48px);
-  transform: translate(-50%, -50%);
+  left: 24px;
+  right: 24px;
+  transform: translateY(-50%);
   overflow-y: auto;
   @include respond(medium, min) {
-    width: calc(100% - 96px);
+    left: 48px;
+    right: 48px;
   }
   @include respond(large, min) {
     width: 730px;
+    left: 50%;
+    right: unset;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -23,10 +27,9 @@
   background-color: $clr-container-bg;
   border-radius: 8px;
   border: 1px solid $clr-container-border;
-  width: calc(100% - 48px);
+  width: 100%;
   margin: 0 auto;
   @include respond(medium, min) {
-    width: calc(100% - 96px);
     padding: 44px;
   }
 }

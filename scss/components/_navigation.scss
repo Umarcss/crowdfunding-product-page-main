@@ -6,10 +6,10 @@
   background-color: $clr-container-bg;
   border: 1px solid $clr-container-border;
   border-radius: 8px;
-  width: 100%;
-  left: 50%;
+  left: 24px;
+  right: 24px;
   top: 52px;
-  transform: translateX(-50%);
+  transform: none;
   position: absolute;
   overflow-y: auto;
   z-index: 1000;
@@ -21,6 +21,7 @@
     position: relative;
     width: unset;
     left: unset;
+    right: unset;
     top: unset;
     transform: unset;
     overflow: hidden;
