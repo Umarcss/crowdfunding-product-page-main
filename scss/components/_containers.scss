@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+section {
+  background-color: $clr-container-bg;
+  border: 1px solid $clr-container-border;
+  border-radius: 8px;
+  @include respond(medium, min) {
+    max-width: 730px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

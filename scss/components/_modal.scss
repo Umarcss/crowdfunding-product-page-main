@@ -1,0 +1,219 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+#pledgeModal {
+  position: fixed;
+  max-height: 90dvh;
+  z-index: 11000;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 48px);
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  @include respond(medium, min) {
+    width: calc(100% - 96px);
+  }
+  @include respond(large, min) {
+    width: 730px;
+  }
+}
+
+.modal {
+  padding: 30px 24px;
+  background-color: $clr-container-bg;
+  border-radius: 8px;
+  border: 1px solid $clr-container-border;
+  width: calc(100% - 48px);
+  margin: 0 auto;
+  @include respond(medium, min) {
+    width: calc(100% - 96px);
+    padding: 44px;
+  }
+}
+
+#pledgeModal.ok {
+  width: calc(100% - 48px);
+  @include respond(medium, min) {
+    width: 540px;
+  }
+}
+
+.modal-content {
+  display: grid;
+  gap: 32px;
+  @include respond(medium, min) {
+    @include text-preset(typo.$text-preset-7-regular);
+  }
+}
+
+.modal-intro {
+  display: grid;
+  gap: 16px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include respond(medium, min) {
+    @include text-preset(typo.$text-preset-6-regular);
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include text-preset(typo.$text-preset-7-regular);
+  @include respond(medium, min) {
+    grid-area: modalqty;
+  }
+}
+
+.quantity span {
+  @include text-preset(typo.$text-preset-5-bold);
+  color: $clr-body-text-dark;
+}
+
+form {
+  display: grid;
+  gap: 24px;
+}
+
+.reward-group {
+  border: 1px solid $clr-container-border;
+  border-radius: 8px;
+}
+
+.reward-group.active {
+  border: 2px solid $clr-accent;
+}
+
+.reward-container {
+  padding: 30.5px 24px;
+  display: grid;
+  gap: 16px;
+  @include respond(medium, min) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "label modalqty"
+      "text text";
+  }
+}
+
+.modal-text-desc {
+  @include respond(medium, min) {
+    grid-area: text;
+  }
+}
+
+.reward-container.active .pledge-form {
+  display: grid;
+}
+
+.reward-description {
+  display: grid;
+  gap: 8px;
+}
+
+.reward-type {
+  @include text-preset(typo.$text-preset-8-bold);
+  color: $clr-body-text-dark;
+}
+
+.reward-pledge {
+  color: $clr-accent;
+  @include text-preset(typo.$text-preset-8-medium);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @include respond(medium, min) {
+    grid-area: label;
+  }
+}
+
+.single {
+  padding-bottom: 16px;
+}
+
+.pledge-form {
+  width: 100%;
+  display: none;
+  gap: 16px;
+  justify-items: center;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.pledge-form-separator {
+  width: 100%;
+  height: 1px;
+  background-color: hsla(0, 0%, 0%, 0.15);
+  margin-bottom: 24px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 24px;
+  position: relative;
+  margin-top: 16px;
+}
+
+.input-group::before {
+  content: "$";
+  position: absolute;
+  top: 50%;
+  left: 44px;
+  transform: translateY(-50%);
+  @include text-preset(typo.$text-preset-8-bold);
+  color: hsla(0, 0%, 0%, 0.25);
+}
+
+.input-group input {
+  width: 100%;
+  height: 48px;
+  padding-left: 40px;
+  color: $clr-body-text-dark;
+  outline: none;
+  border: 1px solid $clr-container-border;
+  border-radius: 33.5px;
+  @include text-preset(typo.$text-preset-8-bold);
+}
+
+.pledge-form {
+  display: none;
+}
+
+.reward-group.active .pledge-form {
+  display: block;
+}
+
+.reward-group.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.modal-success {
+  @include respond(medium, min) {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+.modal-success-content {
+  display: grid;
+  gap: 32px;
+  justify-items: center;
+  text-align: center;
+}
+
+.success-text {
+  display: grid;
+  gap: 16px;
+}

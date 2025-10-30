@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+header {
+  padding: 32px 24px;
+  height: 300px;
+  background-image: linear-gradient(hsla(0, 0%, 0%, 1), hsla(0, 0%, 0%, 0)),
+    url("../images/image-hero-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include respond(medium, min) {
+    padding: 32px 48px;
+    height: 400px;
+  }
+  @include respond(large, min) {
+    background-image: linear-gradient(hsla(0, 0%, 0%, 1), hsla(0, 0%, 0%, 0)),
+      url("../images/image-hero-desktop.jpg");
+    padding: 48px 48px;
+  }
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+  @include respond(large, min) {
+    max-width: 1206px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

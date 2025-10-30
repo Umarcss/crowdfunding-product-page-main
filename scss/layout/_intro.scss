@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+#intro {
+  padding: 56px 24px 36px 24px;
+  position: relative;
+  margin-top: -56px;
+  @include respond(medium, min) {
+    padding: 60px 44px 46px 44px;
+    margin-top: -92px;
+  }
+}
+
+.intro-text {
+  display: grid;
+  gap: 16px;
+  text-align: center;
+  @include respond(medium, min) {
+    gap: 8px;
+  }
+}
+
+.logo-mastercraft {
+  position: absolute;
+  left: 50%;
+  top: -28px;
+  transform: translateX(-50%);
+}
+
+.intro-btns-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+  @include respond(medium, min) {
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+}

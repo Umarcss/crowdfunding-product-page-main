@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+#project-progress {
+  padding: 33.5px 24px;
+  @include respond(medium, min) {
+    padding: 48px;
+  }
+}
+
+.backed,
+.backers,
+.days-left {
+  text-align: center;
+  display: grid;
+  gap: 8px;
+  @include respond(medium, min) {
+    text-align: left;
+  }
+}
+
+.numbers {
+  display: grid;
+  gap: 24px;
+  @include respond(medium, min) {
+    grid-template-columns: repeat(5, auto);
+    @include text-preset(typo.$text-preset-7-regular);
+  }
+}
+
+.numbers span {
+  @include text-preset(typo.$text-preset-1);
+  color: $clr-body-text-dark;
+}
+
+.progress-bar-container {
+  margin-top: 16px;
+  @include respond(medium, min) {
+    margin-top: 32px;
+  }
+}
+
+.separator {
+  margin: 0 auto;
+  width: 80px;
+  height: 1px;
+  background-color: hsla(0, 0%, 0%, 0.15);
+  @include respond(medium, min) {
+    width: 1px;
+    height: 100%;
+    margin-right: 24px;
+  }
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background-color: $clr-container-border;
+  border-radius: 33.5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: $clr-accent;
+  border-radius: 33.5px;
+  transition: width 0.2s ease;
+}

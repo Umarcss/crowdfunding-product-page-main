@@ -1,0 +1,228 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.mobile-menu {
+  background: none;
+  border: none;
+  outline: none;
+  width: 16px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @include respond(large, min) {
+    display: none;
+  }
+}
+
+.mobile-menu:focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid $clr-white;
+  border-radius: 4px;
+}
+
+#backThisProject {
+  width: 100%;
+  height: 56px;
+  background-color: $clr-accent;
+  color: $clr-white;
+  border: none;
+  outline: none;
+  border-radius: 33.5px;
+  @include text-preset(typo.$text-preset-6-bold);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  @include respond(medium, min) {
+    width: 204px;
+  }
+}
+
+.selectReward {
+  width: 157px;
+  height: 48px;
+  background-color: $clr-accent;
+  color: $clr-white;
+  border: none;
+  outline: none;
+  border-radius: 33.5px;
+  @include text-preset(typo.$text-preset-8-bold);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  @include respond(medium, min) {
+    grid-area: button;
+    justify-self: end;
+  }
+}
+
+#backThisProject:hover,
+.selectReward:hover {
+  background-color: $clr-btn-hover;
+}
+
+#backThisProject:focus-visible,
+.selectReward:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid $clr-accent;
+}
+
+#bookmarkProject {
+  background: none;
+  outline: none;
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  @include respond(medium, min) {
+    width: 174px;
+    text-align: left;
+  }
+}
+
+#bookmarkProject::before {
+  @include respond(medium, min) {
+    content: "Bookmark";
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 174px;
+    height: 56px;
+    background-color: $clr-container-border;
+    border-radius: 28px;
+    left: 0;
+    z-index: -1;
+    @include text-preset(typo.$text-preset-6-bold);
+    color: $clr-body-text-primary;
+    padding-right: 24px;
+  }
+}
+
+#bookmarkProject:hover svg circle {
+  fill: $clr-body-text-primary;
+}
+
+#bookmarkProject:hover svg path {
+  fill: $clr-svg-path;
+}
+
+#bookmarkProject.bookmarked svg circle {
+  fill: $clr-btn-hover;
+}
+
+#bookmarkProject.bookmarked svg path {
+  fill: $clr-white;
+}
+
+#bookmarkProject:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid $clr-accent;
+}
+
+#closeModal {
+  background: none;
+  border: none;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: hsla(0, 0%, 0%, 0.4);
+}
+
+#closeModal:hover {
+  color: $clr-body-text-dark;
+}
+
+#closeModal:focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid $clr-body-text-dark;
+  border-radius: 4px;
+}
+
+.pledge-btn {
+  height: 48px;
+  border: none;
+  outline: none;
+  background-color: $clr-accent;
+  color: $clr-white;
+  border-radius: 33.5px;
+  @include text-preset(typo.$text-preset-8-bold);
+  cursor: pointer;
+}
+
+.pledge-btn:hover {
+  background-color: $clr-btn-hover;
+}
+
+.pledge-btn:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid $clr-accent;
+}
+
+.out-of-stock button {
+  background-color: $clr-out-of-stock;
+  cursor: not-allowed;
+}
+
+.out-of-stock button:hover {
+  background-color: $clr-out-of-stock;
+}
+
+.close-btn {
+  width: 107px;
+  height: 48px;
+  border: none;
+  outline: none;
+  background-color: $clr-accent;
+  color: $clr-white;
+  cursor: pointer;
+  @include text-preset(typo.$text-preset-8-bold);
+  border-radius: 33.5px;
+}
+
+.close-btn:hover {
+  background-color: $clr-btn-hover;
+}
+
+.close-btn:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid $clr-accent;
+}
+
+.reward-label input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid $clr-container-border;
+  cursor: pointer;
+  position: relative;
+}
+
+.reward-label input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.reward-label input[type="radio"]:checked {
+  border: 1px solid $clr-container-border;
+}
+
+.reward-label input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: $clr-accent;
+}

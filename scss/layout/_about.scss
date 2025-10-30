@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+#about {
+  padding: 42px 24px;
+  display: grid;
+  gap: 24px;
+  @include respond(medium, min) {
+    padding: 42px 44px;
+    gap: 32px;
+  }
+}
+
+.about-text {
+  display: grid;
+  gap: 16px;
+  @include respond(medium, min) {
+    gap: 24px;
+  }
+}
+
+.pledge-container {
+  display: grid;
+  gap: 24px;
+}

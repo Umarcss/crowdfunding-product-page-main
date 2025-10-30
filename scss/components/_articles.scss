@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+article {
+  border: 1px solid $clr-container-border;
+  border-radius: 8px;
+  padding: 24.5px 24px;
+  display: grid;
+  gap: 24px;
+  @include respond(medium, min) {
+    padding: 33.5px 29px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "head head"
+      "quantity button";
+  }
+}
+
+.pledge-text {
+  display: grid;
+  gap: 16px;
+  @include respond(medium, min) {
+    gap: 24px;
+    grid-area: head;
+  }
+}
+
+.pledge-heading {
+  display: grid;
+  gap: 8px;
+  @include respond(medium, min) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.pledge-heading p {
+  @include text-preset(typo.$text-preset-8-medium);
+  color: $clr-accent;
+  @include respond(medium, min) {
+    @include text-preset(typo.$text-preset-7-regular);
+    font-weight: 500;
+  }
+}
+
+.article-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include text-preset(typo.$text-preset-7-regular);
+  @include respond(medium, min) {
+    grid-area: quantity;
+  }
+}
+
+.article-quantity span {
+  @include text-preset(typo.$text-preset-1);
+  color: $clr-body-text-dark;
+}
+
+.out-of-stock {
+  opacity: 0.3;
+}

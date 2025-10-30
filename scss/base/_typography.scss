@@ -1,0 +1,148 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
+
+$font-body: "Commissioner", sans-serif;
+
+$text-preset-1: (
+  family: $font-body,
+  size: 32px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-2: (
+  family: $font-body,
+  size: 28px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-3: (
+  family: $font-body,
+  size: 24px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-4: (
+  family: $font-body,
+  size: 20px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-5-bold: (
+  family: $font-body,
+  size: 18px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-5-medium: (
+  family: $font-body,
+  size: 18px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 500,
+);
+
+$text-preset-6-bold: (
+  family: $font-body,
+  size: 16px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-6-medium: (
+  family: $font-body,
+  size: 16px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 500,
+);
+
+$text-preset-6-regular: (
+  family: $font-body,
+  size: 16px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-7-regular: (
+  family: $font-body,
+  size: 15px,
+  lineHeight: 2,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-8-bold: (
+  family: $font-body,
+  size: 14px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-8-medium: (
+  family: $font-body,
+  size: 14px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 500,
+);
+
+$text-preset-8-regular: (
+  family: $font-body,
+  size: 14px,
+  lineHeight: 1.75,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-9: (
+  family: $font-body,
+  size: 13px,
+  lineHeight: 1.25,
+  letterSpacing: 0,
+  weight: 500,
+);
+
+body {
+  @include text-preset($text-preset-8-regular);
+  @include respond(medium, min) {
+    @include text-preset($text-preset-6-regular);
+  }
+}
+
+h1 {
+  color: $clr-body-text-dark;
+  @include text-preset($text-preset-4);
+  @include respond(medium, min) {
+    @include text-preset($text-preset-2);
+  }
+}
+
+h2 {
+  color: $clr-body-text-dark;
+  @include text-preset($text-preset-5-bold);
+  @include respond(medium, min) {
+    @include text-preset($text-preset-4);
+  }
+}
+
+h3 {
+  color: $clr-body-text-dark;
+  @include text-preset($text-preset-8-bold);
+  @include respond(medium, min) {
+    @include text-preset($text-preset-5-bold);
+  }
+}

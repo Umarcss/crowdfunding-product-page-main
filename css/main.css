@@ -1,0 +1,1057 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
+body {
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  body {
+    font-family: "Commissioner", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+h1 {
+  color: #000000;
+  font-family: "Commissioner", sans-serif;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-family: "Commissioner", sans-serif;
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+}
+
+h2 {
+  color: #000000;
+  font-family: "Commissioner", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-family: "Commissioner", sans-serif;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+}
+
+h3 {
+  color: #000000;
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-family: "Commissioner", sans-serif;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  color: #7a7a7a;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+.site-wrapper {
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  padding: 0 24px;
+  display: grid;
+  gap: 24px;
+  padding-bottom: 76px;
+}
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 0 48px;
+    padding-bottom: 124px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  z-index: 999;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: none; /* Safari/Chrome */
+  appearance: textfield; /* Standard */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mobile-menu {
+  background: none;
+  border: none;
+  outline: none;
+  width: 16px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu:focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid #ffffff;
+  border-radius: 4px;
+}
+
+#backThisProject {
+  width: 100%;
+  height: 56px;
+  background-color: #3cb3ab;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 33.5px;
+  font-family: "Commissioner", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+@media (min-width: 768px) {
+  #backThisProject {
+    width: 204px;
+  }
+}
+
+.selectReward {
+  width: 157px;
+  height: 48px;
+  background-color: #3cb3ab;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 33.5px;
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+@media (min-width: 768px) {
+  .selectReward {
+    grid-area: button;
+    justify-self: end;
+  }
+}
+
+#backThisProject:hover,
+.selectReward:hover {
+  background-color: #147a73;
+}
+
+#backThisProject:focus-visible,
+.selectReward:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid #3cb3ab;
+}
+
+#bookmarkProject {
+  background: none;
+  outline: none;
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  #bookmarkProject {
+    width: 174px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  #bookmarkProject::before {
+    content: "Bookmark";
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 174px;
+    height: 56px;
+    background-color: #d9d9d9;
+    border-radius: 28px;
+    left: 0;
+    z-index: -1;
+    font-family: "Commissioner", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #7a7a7a;
+    padding-right: 24px;
+  }
+}
+
+#bookmarkProject:hover svg circle {
+  fill: #7a7a7a;
+}
+
+#bookmarkProject:hover svg path {
+  fill: #b1b1b1;
+}
+
+#bookmarkProject.bookmarked svg circle {
+  fill: #147a73;
+}
+
+#bookmarkProject.bookmarked svg path {
+  fill: #ffffff;
+}
+
+#bookmarkProject:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid #3cb3ab;
+}
+
+#closeModal {
+  background: none;
+  border: none;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: hsla(0, 0%, 0%, 0.4);
+}
+
+#closeModal:hover {
+  color: #000000;
+}
+
+#closeModal:focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.pledge-btn {
+  height: 48px;
+  border: none;
+  outline: none;
+  background-color: #3cb3ab;
+  color: #ffffff;
+  border-radius: 33.5px;
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.pledge-btn:hover {
+  background-color: #147a73;
+}
+
+.pledge-btn:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid #3cb3ab;
+}
+
+.out-of-stock button {
+  background-color: #929292;
+  cursor: not-allowed;
+}
+
+.out-of-stock button:hover {
+  background-color: #929292;
+}
+
+.close-btn {
+  width: 107px;
+  height: 48px;
+  border: none;
+  outline: none;
+  background-color: #3cb3ab;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  border-radius: 33.5px;
+}
+
+.close-btn:hover {
+  background-color: #147a73;
+}
+
+.close-btn:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid #3cb3ab;
+}
+
+.reward-label input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  position: relative;
+}
+
+.reward-label input[type=radio]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.reward-label input[type=radio]:checked {
+  border: 1px solid #d9d9d9;
+}
+
+.reward-label input[type=radio]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #3cb3ab;
+}
+
+article {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 24.5px 24px;
+  display: grid;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  article {
+    padding: 33.5px 29px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "head head" "quantity button";
+  }
+}
+
+.pledge-text {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .pledge-text {
+    gap: 24px;
+    grid-area: head;
+  }
+}
+
+.pledge-heading {
+  display: grid;
+  gap: 8px;
+}
+@media (min-width: 768px) {
+  .pledge-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.pledge-heading p {
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #3cb3ab;
+}
+@media (min-width: 768px) {
+  .pledge-heading p {
+    font-family: "Commissioner", sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.article-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Commissioner", sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  .article-quantity {
+    grid-area: quantity;
+  }
+}
+
+.article-quantity span {
+  font-family: "Commissioner", sans-serif;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.out-of-stock {
+  opacity: 0.3;
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  section {
+    max-width: 730px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.main-menu {
+  padding: 32px 24px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  width: 100%;
+  left: 50%;
+  top: 52px;
+  transform: translateX(-50%);
+  position: absolute;
+  overflow-y: auto;
+  z-index: 1000;
+}
+@media (min-width: 1024px) {
+  .main-menu {
+    padding: 0;
+    background-color: transparent;
+    border-radius: unset;
+    border: none;
+    position: relative;
+    width: unset;
+    left: unset;
+    top: unset;
+    transform: unset;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+.main-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .main-menu ul {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.main-link {
+  font-family: "Commissioner", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #000000;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  .main-link {
+    color: #ffffff;
+    font-family: "Commissioner", sans-serif;
+    font-size: 13px;
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-link:hover {
+    color: #3cb3ab;
+  }
+}
+
+.main-menu li {
+  position: relative;
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  .main-menu li {
+    margin-bottom: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-menu ul li::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: hsla(0, 0%, 18%, 0.1);
+    position: absolute;
+    bottom: -24px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-menu ul li::after {
+    display: none;
+  }
+}
+
+.main-menu ul li:last-child {
+  margin-bottom: 0;
+}
+
+.main-menu ul li:last-child::after {
+  display: none;
+}
+
+#pledgeModal {
+  position: fixed;
+  max-height: 90dvh;
+  z-index: 11000;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 48px);
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+}
+@media (min-width: 768px) {
+  #pledgeModal {
+    width: calc(100% - 96px);
+  }
+}
+@media (min-width: 1024px) {
+  #pledgeModal {
+    width: 730px;
+  }
+}
+
+.modal {
+  padding: 30px 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  width: calc(100% - 48px);
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .modal {
+    width: calc(100% - 96px);
+    padding: 44px;
+  }
+}
+
+#pledgeModal.ok {
+  width: calc(100% - 48px);
+}
+@media (min-width: 768px) {
+  #pledgeModal.ok {
+    width: 540px;
+  }
+}
+
+.modal-content {
+  display: grid;
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  .modal-content {
+    font-family: "Commissioner", sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+.modal-intro {
+  display: grid;
+  gap: 16px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .modal-header {
+    font-family: "Commissioner", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Commissioner", sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  .quantity {
+    grid-area: modalqty;
+  }
+}
+
+.quantity span {
+  font-family: "Commissioner", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+form {
+  display: grid;
+  gap: 24px;
+}
+
+.reward-group {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.reward-group.active {
+  border: 2px solid #3cb3ab;
+}
+
+.reward-container {
+  padding: 30.5px 24px;
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .reward-container {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "label modalqty" "text text";
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-text-desc {
+    grid-area: text;
+  }
+}
+
+.reward-container.active .pledge-form {
+  display: grid;
+}
+
+.reward-description {
+  display: grid;
+  gap: 8px;
+}
+
+.reward-type {
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.reward-pledge {
+  color: #3cb3ab;
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  label {
+    grid-area: label;
+  }
+}
+
+.single {
+  padding-bottom: 16px;
+}
+
+.pledge-form {
+  width: 100%;
+  display: none;
+  gap: 16px;
+  justify-items: center;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.pledge-form-separator {
+  width: 100%;
+  height: 1px;
+  background-color: hsla(0, 0%, 0%, 0.15);
+  margin-bottom: 24px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 24px;
+  position: relative;
+  margin-top: 16px;
+}
+
+.input-group::before {
+  content: "$";
+  position: absolute;
+  top: 50%;
+  left: 44px;
+  transform: translateY(-50%);
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: hsla(0, 0%, 0%, 0.25);
+}
+
+.input-group input {
+  width: 100%;
+  height: 48px;
+  padding-left: 40px;
+  color: #000000;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 33.5px;
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.pledge-form {
+  display: none;
+}
+
+.reward-group.active .pledge-form {
+  display: block;
+}
+
+.reward-group.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .modal-success {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+.modal-success-content {
+  display: grid;
+  gap: 32px;
+  justify-items: center;
+  text-align: center;
+}
+
+.success-text {
+  display: grid;
+  gap: 16px;
+}
+
+header {
+  padding: 32px 24px;
+  height: 300px;
+  background-image: linear-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0)), url("../images/image-hero-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  header {
+    padding: 32px 48px;
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    background-image: linear-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0)), url("../images/image-hero-desktop.jpg");
+    padding: 48px 48px;
+  }
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+}
+@media (min-width: 1024px) {
+  .top-bar-container {
+    max-width: 1206px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+#intro {
+  padding: 56px 24px 36px 24px;
+  position: relative;
+  margin-top: -56px;
+}
+@media (min-width: 768px) {
+  #intro {
+    padding: 60px 44px 46px 44px;
+    margin-top: -92px;
+  }
+}
+
+.intro-text {
+  display: grid;
+  gap: 16px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .intro-text {
+    gap: 8px;
+  }
+}
+
+.logo-mastercraft {
+  position: absolute;
+  left: 50%;
+  top: -28px;
+  transform: translateX(-50%);
+}
+
+.intro-btns-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .intro-btns-container {
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+}
+
+#project-progress {
+  padding: 33.5px 24px;
+}
+@media (min-width: 768px) {
+  #project-progress {
+    padding: 48px;
+  }
+}
+
+.backed,
+.backers,
+.days-left {
+  text-align: center;
+  display: grid;
+  gap: 8px;
+}
+@media (min-width: 768px) {
+  .backed,
+  .backers,
+  .days-left {
+    text-align: left;
+  }
+}
+
+.numbers {
+  display: grid;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .numbers {
+    grid-template-columns: repeat(5, auto);
+    font-family: "Commissioner", sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+.numbers span {
+  font-family: "Commissioner", sans-serif;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.progress-bar-container {
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  .progress-bar-container {
+    margin-top: 32px;
+  }
+}
+
+.separator {
+  margin: 0 auto;
+  width: 80px;
+  height: 1px;
+  background-color: hsla(0, 0%, 0%, 0.15);
+}
+@media (min-width: 768px) {
+  .separator {
+    width: 1px;
+    height: 100%;
+    margin-right: 24px;
+  }
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background-color: #d9d9d9;
+  border-radius: 33.5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #3cb3ab;
+  border-radius: 33.5px;
+  transition: width 0.2s ease;
+}
+
+#about {
+  padding: 42px 24px;
+  display: grid;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  #about {
+    padding: 42px 44px;
+    gap: 32px;
+  }
+}
+
+.about-text {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .about-text {
+    gap: 24px;
+  }
+}
+
+.pledge-container {
+  display: grid;
+  gap: 24px;
+}
+
+/*# sourceMappingURL=main.css.map */
