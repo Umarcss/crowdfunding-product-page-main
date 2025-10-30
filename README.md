@@ -31,12 +31,7 @@ Users should be able to:
 
 ![](./screenshot.png)
 
-### Links
 
-- Solution URL: [Solution](https://github.com/socratesioa/crowdfunding-product-page)
-- Live Site URL: [Live Site](https://socratesioa.github.io/crowdfunding-product-page)
-
-## My process
 
 ### Built with
 
@@ -58,5 +53,4 @@ As projects get larger and more difficult, more than ever, I want to start plann
 
 ## Author
 
-- Website - [My Portfolio](https://portfolio.thisissocrates.com/)
-- Frontend Mentor - [@socratesioa](https://www.frontendmentor.io/profile/socratesioa)
+- Frontend Mentor - [@Umarcss](https://www.frontendmentor.io/profile/Umarcss)
